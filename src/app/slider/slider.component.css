@@ -1,0 +1,37 @@
+#slider{
+    padding: 2%;
+    background-color: #eee;
+    height: 100vh;
+    position: fixed;
+    width: 23%;
+}
+
+.dog-image{
+    height: 120px;
+}
+
+#dog-api-title{
+    margin-top: 5px;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
+}
+
+#dog-option .list-group-item{
+    border-bottom: 1px solid #ccc !important;
+}
+
+.list-group-item a {
+    color: #222;
+    text-decoration: none;
+}
+
+.social-network-block{
+    padding-top: 10%;
+}
+
+.social-network-block li {
+    padding-bottom: 0px;
+}

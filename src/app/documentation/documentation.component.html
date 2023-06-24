@@ -1,0 +1,33 @@
+<div *ngIf="dogBreedsList">
+    <h4>ENDPOINTS</h4>
+    <br>
+    <div>
+        <ul class="list-group list-group-horizontal breed-option">
+            <li class="list-group-item"> <a routerLink="/documentation" routerLinkActive="active"> List all breeds </a>
+            </li>
+            <li class="list-group-item"> <a routerLink="/breedsList" routerLinkActive="active"> Browse breed list </a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="padding-top: 8%;">
+        <h4>LIST ALL BREEDS</h4>
+        <br>
+        <b class="url-block">https://dog.ceo/api/breeds/list/all</b>
+    </div>
+    <div style="padding-top: 8%;">
+        <h4>JSON</h4> <br>
+        <textarea class="json-text-area">{{dogBreedsList |json}}</textarea>
+    </div>
+
+    <div>
+        <ul class="list-group list-group-horizontal breed-option" id="browse-breed">
+            <li class="list-group-item"> <a routerLink="/breedsList" routerLinkActive="active">Browse breeds lists here.
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div *ngIf="!dogBreedsList">
+    <b style="color: red;">{{errorMsg}}</b>
+</div>

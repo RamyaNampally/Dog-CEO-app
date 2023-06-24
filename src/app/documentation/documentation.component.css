@@ -1,0 +1,21 @@
+.breed-option li {
+    border: none;
+    text-decoration: none;
+    padding-left: 0px;
+    padding-right: 4%;  
+}
+
+.breed-option li a {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #1a91db;
+}
+.json-text-area{
+    height: 400px;
+    width: 100%;
+}
+
+#browse-breed li a {
+    font-size: larger;
+    border-bottom: 2px solid #1a91db;
+}

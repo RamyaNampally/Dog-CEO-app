@@ -1,0 +1,17 @@
+<div *ngIf="dogBreedsList">
+    <h4>BREEDS LIST</h4>
+    <br>
+    <b class="url-block">https://dog.ceo/api/breeds/
+        <select class="" [(ngModel)]="dogBreed" (change)="toFetchDogBreed()">
+            <option *ngFor="let breed of dogBreedsList | keyvalue" [value]="breed.key">{{breed.key}}</option>
+        </select>
+        /images/random <button class="fetchBtn" (click)="toFetchDogBreed()">Fetch</button>
+    </b>
+    <br>
+    <div align="center">
+        <img src="{{dogImage}}" alt="No Image" class="dog-image">
+    </div>
+</div>
+<div *ngIf="!dogBreedsList">
+    <b style="color: red;">{{errorMsg}}</b>
+</div>

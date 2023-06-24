@@ -1,0 +1,43 @@
+<div>
+    <h1>The internet's biggest collection of open source dog pictures.</h1>
+    <br>
+    <h5>
+        Read our <a routerLink="/documentation" routerLinkActive="active"> Documentation </a> to find out more or try it
+        out for yourself below.
+    </h5>
+    <br>
+    <h5>Want to add your dog to the collection? Submit your photos as a
+        <a href="https://github.com/RamyaNampally/DogCEO.git"> pull request here. </a>
+    </h5>
+    <br>
+    <h5>
+        Need more dog in your life? Get issue 1 of
+        <a href="https://sideorders.co.uk/collections/frontpage/products/dog-ceo-issue-1" target="_blank"> Dog CEO Zine
+        </a>
+        - a quarterly business and lifestyle magazine for the
+        modern dog. Featuring an exclusive interview with Scottie the Monopoly dog.
+        <a href="https://sideorders.co.uk/collections/frontpage/products/dog-ceo-issue-1" target="_blank"> Order your
+            copy </a>
+        from Side Orders
+        Publishing. Ships worldwide.
+    </h5>
+</div>
+
+<div style="margin-top: 10%;">
+    <b class="url-block"> https://dog.ceo/api/breeds/image/random <button class="fetchBtn"
+            (click)="togetRandomDogBreed()">Fetch</button>
+    </b>
+</div>
+
+<div *ngIf="randomDog" class="row" style="padding-top: 8%;">
+    <div class="col-lg-6">
+        <h4>JSON</h4> <br>
+        <textarea class="json-textArea">{{randomDog |json}}</textarea>
+    </div>
+    <div class="col-lg-6">
+        <img src="{{dogBreed}}" alt="No Image" class="dog-image" style="width: 100%;">
+    </div>
+</div>
+<div *ngIf="!randomDog">
+    <b style="color: red;">{{errorMsg}}</b>
+</div>
